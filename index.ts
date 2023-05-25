@@ -1,4 +1,19 @@
+#!/usr/bin/env node
 import crypto from 'crypto'
+import chalkAnimation from 'chalk-animation';
+const sleep=()=>new Promise((resolve)=>setTimeout((resolve),2000));
+
+async function welcomeScreen(){
+    let title=chalkAnimation.rainbow(`
+=======================================================================
+>>>>>>>>>>>>>>>>>>>>>>> STUDENT MANAGEMENT SYSTEM <<<<<<<<<<<<<<<<<<<<<
+=======================================================================
+`)
+    await sleep();
+    title.stop();
+
+}
+await welcomeScreen();
 class Student{
     name:string;
     studentID:string;
